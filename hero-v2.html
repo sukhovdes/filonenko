@@ -4,39 +4,320 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1440">
   <meta name="robots" content="noindex, nofollow">
-  <title>Филоненко Групп — Юридическая поддержка бизнеса</title>
+  <title>Филоненко Групп — вариант hero</title>
   <link rel="stylesheet" href="style.css?v=2.1">
+
+  <style>
+    /* ===== вариант 2 первого блока ===== */
+    .header-v2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 40px;
+    }
+
+    .header-v2 .logo {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .header-v2 .logo span {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .hv2-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hv2-nav {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      margin-right: 12px;
+    }
+
+    .hv2-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 14px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .hv2-nav-link:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hv2-phone {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      padding: 0 20px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: border-color 0.2s ease;
+    }
+
+    .hv2-phone:hover {
+      border-color: #fff;
+    }
+
+    .hv2-icon,
+    .hv2-lang {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      height: 56px;
+      padding: 0 18px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      color: #fff;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .hv2-icon:hover,
+    .hv2-lang:hover {
+      border-color: #fff;
+    }
+
+    .hv2-cta {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      padding: 0 22px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .hv2-cta:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hv2-burger-wrap {
+      position: relative;
+    }
+
+    .hv2-burger {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      width: 56px;
+      height: 56px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .hv2-burger:hover {
+      border-color: #fff;
+    }
+
+    .hv2-burger span {
+      display: block;
+      width: 18px;
+      height: 1.5px;
+      background: #fff;
+    }
+
+    .hv2-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      display: none;
+      flex-direction: column;
+      min-width: 220px;
+      padding: 8px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    }
+
+    .hv2-menu.is-open {
+      display: flex;
+    }
+
+    .hv2-menu a {
+      padding: 12px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #1A1A1A;
+      border-radius: 4px;
+      transition: background 0.15s ease;
+    }
+
+    .hv2-menu a:hover {
+      background: #F2F1EE;
+    }
+
+    .hero-v2 {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 190px 40px 48px;
+      color: #fff;
+      /* фон: подставить картинку — background: url('img/hero.jpg') center / cover no-repeat; */
+      background: #161616;
+    }
+
+    .hero-v2__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    .hero-v2__eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 28px;
+    }
+
+    .hero-v2__title {
+      font-size: 64px;
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      max-width: 1080px;
+    }
+
+    .hero-v2__bottom {
+      margin-top: 56px;
+    }
+
+    .hero-v2__desc {
+      max-width: 860px;
+      font-size: 17px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 32px;
+    }
+
+    .hero-v2__actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .hero-v2__btn-main {
+      height: 72px;
+      min-width: 400px;
+      padding: 0 30px 0 34px;
+      font-size: 15px;
+      justify-content: space-between;
+      gap: 20px;
+      overflow: hidden;
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .hero-v2__btn-main:hover {
+      background: #7A0018;
+    }
+
+    .hero-v2__btn-main svg {
+      flex-shrink: 0;
+      opacity: 0.6;
+      transition: transform 0.2s ease;
+    }
+
+    .hero-v2__btn-main:hover svg {
+      transform: rotate(45deg);
+    }
+
+    .hero-v2__btn-sec {
+      height: 72px;
+      padding: 0 40px;
+      font-size: 15px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="#" class="logo">Филоненко <span>Групп</span></a>
-        <nav class="header__nav">
-          <a href="#services" class="header__nav-link">Услуги</a>
-          <a href="#cases" class="header__nav-link">Кейсы</a>
-          <a href="#founder" class="header__nav-link">Об основателе</a>
-          <a href="#blog" class="header__nav-link">Материалы</a>
-          <a href="#contact" class="header__nav-link">Контакты</a>
+  <!-- ===== HERO V2: шапка поверх фона, контент к низу ===== -->
+  <section class="hero-v2">
+    <header class="header-v2">
+      <a href="#" class="logo">Филоненко <span>Групп</span></a>
+      <div class="hv2-right">
+        <nav class="hv2-nav">
+          <button type="button" class="hv2-nav-link">Для бизнеса
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><line x1="0" y1="6" x2="12" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="0" x2="6" y2="12" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <button type="button" class="hv2-nav-link">Частным лицам
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><line x1="0" y1="6" x2="12" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="0" x2="6" y2="12" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
         </nav>
-        <div class="header__right">
-          <a href="tel:+79024888220" class="header__phone">+7 (902) 488-82-20</a>
-          <a href="#contact" class="btn btn--dark">Обсудить ситуацию</a>
+        <a href="tel:+79024888220" class="hv2-phone">+7 (902) 488-82-20</a>
+        <button type="button" class="hv2-icon" aria-label="Поиск">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+        </button>
+        <button type="button" class="hv2-lang">RU
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" style="opacity:.5;"><polyline points="2 4 6 8 10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <a href="#contact" class="hv2-cta">Обсудить ситуацию</a>
+        <div class="hv2-burger-wrap">
+          <button type="button" class="hv2-burger" id="hv2Burger" aria-label="Меню">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="hv2-menu" id="hv2Menu">
+            <a href="#blog">Блог</a>
+            <a href="#founder">О компании</a>
+            <a href="#contact">Контакты</a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="container">
-      <h1 class="hero__title">Юридическая <span class="hero__title-mark">поддержка бизнеса</span><span class="hero__title-dim">, где важны опыт и&nbsp;результат</span></h1>
-      <div class="hero__foot">
-        <p class="hero__desc">Разбираем ситуацию целиком — документы, факты, риски. Под задачу подключаем профильного эксперта.</p>
-        <div class="hero__actions">
-          <a href="#contact" class="btn btn--light btn--hero">
+    </header>
+    <div class="hero-v2__content">
+      <div class="hero-v2__eyebrow">Сделки · ВЭД · Налоги · Суды · Уголовно-правовая защита</div>
+      <h1 class="hero-v2__title">Юридическая <span class="hero__title-mark">поддержка бизнеса</span><span class="hero__title-dim">, где важны опыт и&nbsp;результат</span></h1>
+      <div class="hero-v2__bottom">
+        <p class="hero-v2__desc">Разбираем ситуацию целиком — документы, факты, риски. Под задачу подключаем профильного эксперта.</p>
+        <div class="hero-v2__actions">
+          <a href="#contact" class="btn hero-v2__btn-main">
             <span class="btn__rotator">
               <span class="btn__rotator-track">
                 <span>Задать вопрос юристу</span>
@@ -54,20 +335,7 @@
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><line x1="2" y1="9.58579" x2="8.58579" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3.53845 2H9.53845V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-        </div>
-      </div>
-      <div class="hero__facts">
-        <div class="hero__fact">
-          <div class="hero__fact-title">Опыт прокуратуры и судов</div>
-          <div class="hero__fact-text">Основатель — кандидат юридических наук</div>
-        </div>
-        <div class="hero__fact">
-          <div class="hero__fact-title">Российские и международные проекты</div>
-          <div class="hero__fact-text">Сделки, ВЭД, санкции, иностранные компании</div>
-        </div>
-        <div class="hero__fact">
-          <div class="hero__fact-title">Срочный режим</div>
-          <div class="hero__fact-text">Подключаемся в день обращения</div>
+          <a href="#services" class="btn btn--light hero-v2__btn-sec">Услуги</a>
         </div>
       </div>
     </div>
@@ -423,6 +691,22 @@
   </footer>
 
   <script>
+    // Бургер-меню в шапке
+    (function () {
+      var burger = document.getElementById('hv2Burger');
+      var menu = document.getElementById('hv2Menu');
+      burger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        menu.classList.toggle('is-open');
+      });
+      document.addEventListener('click', function (e) {
+        if (!menu.contains(e.target)) menu.classList.remove('is-open');
+      });
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { menu.classList.remove('is-open'); });
+      });
+    })();
+
     document.querySelectorAll('.form__channels').forEach(function (group) {
       group.addEventListener('click', function (e) {
         var btn = e.target.closest('.form__channel');
