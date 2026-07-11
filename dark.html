@@ -598,6 +598,303 @@
       color: #fff;
     }
 
+    /* --- форма: акцентная панель --- */
+    .cv2 {
+      padding: 24px 20px;
+    }
+
+    .cv2 .container {
+      width: auto;
+      padding: 0;
+    }
+
+    .cv2__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      background: var(--accent);
+      color: #1A1A1A;
+      border-radius: 4px;
+      padding: 72px 60px;
+    }
+
+    .cv2__title {
+      font-size: 54px;
+      font-weight: 500;
+      line-height: 1.05;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .cv2__sub {
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(26, 26, 26, 0.65);
+    }
+
+    .cv2__urgent {
+      margin-top: 48px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: rgba(26, 26, 26, 0.75);
+    }
+
+    .cv2__urgent a {
+      font-weight: 500;
+      color: #1A1A1A;
+      border-bottom: 1px solid rgba(26, 26, 26, 0.4);
+    }
+
+    .cv2__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .cv2__input {
+      width: 100%;
+      height: 64px;
+      padding: 0 20px;
+      background: rgba(26, 26, 26, 0.08);
+      border: none;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 14px;
+      color: #1A1A1A;
+    }
+
+    .cv2__input::placeholder {
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: rgba(26, 26, 26, 0.5);
+    }
+
+    .cv2__textarea {
+      min-height: 120px;
+      padding: 20px;
+      resize: vertical;
+      margin-top: 12px;
+    }
+
+    .cv2__channels {
+      display: flex;
+      gap: 12px;
+    }
+
+    .cv2 .form__channel {
+      flex: 1;
+      height: 64px;
+      background: rgba(26, 26, 26, 0.08);
+      border: none;
+      border-radius: 4px;
+      color: rgba(26, 26, 26, 0.65);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .cv2 .form__channel.is-active {
+      background: #1A1A1A;
+      color: var(--accent);
+    }
+
+    .cv2__consent {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 24px 0 32px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.6;
+      color: rgba(26, 26, 26, 0.75);
+      cursor: pointer;
+    }
+
+    .cv2__consent input {
+      width: 22px;
+      height: 22px;
+      margin-top: 2px;
+      accent-color: #1A1A1A;
+    }
+
+    .cv2__consent a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .cv2__actions {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .cv2__submit {
+      height: 60px;
+      padding: 0 40px;
+      background: transparent;
+      border: 1px solid #1A1A1A;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #1A1A1A;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .cv2__submit:hover {
+      background: #1A1A1A;
+      color: var(--accent);
+    }
+
+    .cv2__note {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: rgba(26, 26, 26, 0.65);
+    }
+
+    .cv2 .form__done {
+      background: rgba(26, 26, 26, 0.1);
+      color: #1A1A1A;
+    }
+
+    /* --- футер v2 --- */
+    .footer__map {
+      width: 100%;
+      height: 280px;
+    }
+
+    .fv2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 88px;
+    }
+
+    .fv2__left {
+      padding-right: 64px;
+    }
+
+    .fv2__right {
+      position: relative;
+      padding-left: 64px;
+      border-left: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .fv2__eyebrow {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #fff;
+      margin-bottom: 28px;
+    }
+
+    .fv2__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 10px;
+    }
+
+    .fv2__title {
+      font-size: 52px;
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 48px;
+    }
+
+    .fv2__tiles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .fv2__tile {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 200px;
+      padding: 24px 24px 20px;
+      background: #1F1F1F;
+      border-radius: 4px;
+      font-size: 18px;
+      color: #fff;
+      transition: background 0.2s ease;
+    }
+
+    .fv2__tile:hover {
+      background: #2A2A2A;
+    }
+
+    .fv2__tile svg {
+      flex-shrink: 0;
+      margin-top: 4px;
+      opacity: 0.7;
+    }
+
+    .fv2__socials {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      gap: 8px;
+    }
+
+    .fv2__socials .footer__soc {
+      border-radius: 50%;
+    }
+
+    .fv2__big {
+      display: block;
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 1.25;
+      color: #fff;
+    }
+
+    .fv2__address {
+      margin-top: 20px;
+      font-size: 15px;
+      color: #9A9A9A;
+    }
+
+    .fv2__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #7A7A7A;
+    }
+
+    .fv2__bottom .logo {
+      font-size: 15px;
+    }
+
+    .fv2__bottom a:not(.logo):hover {
+      color: #fff;
+    }
+
+    .fv2__legal {
+      max-width: 420px;
+      line-height: 1.6;
+    }
+
     /* --- hero-v2 в тёмной теме --- */
     .hero-v2 {
       background: #191919;
@@ -945,45 +1242,34 @@
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section class="section section--dark" id="contact">
+  <!-- ===== CONTACT (акцентная панель) ===== -->
+  <section class="section cv2" id="contact">
     <div class="container">
-      <div class="contact">
-        <div>
-          <h2 class="contact__title">Обсудим вашу ситуацию</h2>
-          <p class="contact__desc">Опишите задачу — подскажем, с чего начать. Идеальный пакет документов не нужен.</p>
-          <div class="contact__urgent">
-            <div class="contact__urgent-title">Ситуация не терпит отлагательств?</div>
-            <p class="contact__urgent-text">Проверка, обыск, допрос — звоните: <a href="tel:+79024888220">+7 (902) 488-82-20</a>. Подключаемся в день обращения.</p>
-          </div>
+      <div class="cv2__inner">
+        <div class="cv2__left">
+          <h2 class="cv2__title">Обсудим вашу<br>ситуацию</h2>
+          <p class="cv2__sub">Опишите задачу — подскажем, с чего начать</p>
+          <p class="cv2__urgent">Срочно? Проверка, обыск, допрос — звоните <a href="tel:+79024888220">+7 (902) 488-82-20</a>. Подключаемся в день обращения.</p>
         </div>
-        <form class="form" id="contactForm">
-          <h3 class="form__title">Оставить заявку</h3>
-          <div class="form__row">
-            <label class="form__label" for="fName">Ваше имя</label>
-            <input class="form__input" id="fName" type="text" placeholder="Имя">
+        <form class="cv2__form" id="contactForm">
+          <div class="cv2__grid">
+            <input class="cv2__input" id="fName" type="text" placeholder="Ваше имя*">
+            <input class="cv2__input" id="fPhone" type="tel" placeholder="+7 (000) 000-00-00">
           </div>
-          <div class="form__row">
-            <label class="form__label" for="fPhone">Телефон</label>
-            <input class="form__input" id="fPhone" type="tel" placeholder="+7">
+          <div class="form__channels cv2__channels">
+            <button type="button" class="form__channel is-active">Звонок</button>
+            <button type="button" class="form__channel">Telegram</button>
+            <button type="button" class="form__channel">WhatsApp</button>
           </div>
-          <div class="form__row">
-            <label class="form__label">Удобный способ связи</label>
-            <div class="form__channels">
-              <button type="button" class="form__channel is-active">Звонок</button>
-              <button type="button" class="form__channel">Telegram</button>
-              <button type="button" class="form__channel">WhatsApp</button>
-            </div>
-          </div>
-          <div class="form__row">
-            <label class="form__label" for="fText">Коротко о ситуации</label>
-            <textarea class="form__textarea" id="fText" placeholder="Что произошло и какой вопрос хотите решить"></textarea>
-          </div>
-          <label class="form__consent">
+          <textarea class="cv2__input cv2__textarea" id="fText" placeholder="Коротко о ситуации"></textarea>
+          <label class="cv2__consent">
             <input type="checkbox">
-            <span>Я ознакомлен(а) с <a href="#">Политикой обработки персональных данных</a> и даю согласие на обработку персональных данных</span>
+            <span>Даю <a href="#">согласие на обработку персональных данных</a> и принимаю <a href="#">политику конфиденциальности</a></span>
           </label>
-          <button type="submit" class="btn btn--dark">Обсудить ситуацию</button>
+          <div class="cv2__actions">
+            <button type="submit" class="cv2__submit">Обсудить ситуацию</button>
+            <span class="cv2__note">Свяжемся в течение рабочего дня</span>
+          </div>
           <div class="form__done" id="formDone">Спасибо! Мы свяжемся с вами в ближайшее время.</div>
         </form>
       </div>
@@ -993,24 +1279,24 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
-      <div class="eyebrow footer__eyebrow">Контакты</div>
-      <h2 class="footer__title">На связи, когда<br>решают часы</h2>
-      <div class="footer__grid">
-        <div class="footer__col">
-          <div class="footer__label">Телефон</div>
-          <a class="footer__big" href="tel:+79024888220">+7 (902) 488-82-20</a>
-          <div class="footer__label">Мессенджеры</div>
-          <div class="footer__msgrs footer__msgrs--icons">
+      <div class="fv2">
+        <div class="fv2__left">
+          <div class="fv2__eyebrow"><span class="fv2__dot"></span>Контакты</div>
+          <h2 class="fv2__title">Начните работу с нами</h2>
+          <div class="fv2__tiles">
+            <a href="#contact" class="fv2__tile">Связаться <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><line x1="2" y1="9.58579" x2="8.58579" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3.53845 2H9.53845V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#" class="fv2__tile">Карточка организации <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><line x1="2" y1="9.58579" x2="8.58579" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3.53845 2H9.53845V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="fv2__right">
+          <div class="fv2__socials">
             <a href="#" class="footer__soc" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
             <a href="#" class="footer__soc" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
             <a href="#" class="footer__soc" aria-label="Max"><svg width="18" height="18" viewBox="0 0 720 720" fill="currentColor"><path d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/></svg></a>
           </div>
-        </div>
-        <div class="footer__col">
-          <div class="footer__label">Почта</div>
-          <a class="footer__big" href="mailto:info@f-plus.ru">info@f-plus.ru</a>
-          <div class="footer__label">Адрес</div>
-          <div class="footer__address">Владивосток, ул. Суханова, 6а</div>
+          <a class="fv2__big" href="tel:+79024888220">+7 (902) 488-82-20</a>
+          <a class="fv2__big" href="mailto:info@f-plus.ru">info@f-plus.ru</a>
+          <div class="fv2__address">Владивосток, ул. Суханова, 6а</div>
           <iframe class="footer__map" src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D1%83%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%206%D0%B0&z=16" loading="lazy" title="Карта: Владивосток, ул. Суханова, 6а"></iframe>
         </div>
       </div>
@@ -1034,14 +1320,12 @@
           <a href="#services">Все направления</a>
         </div>
       </div>
-      <div class="footer__bottom">
-        <div>
-          <a href="#" class="logo">Филоненко <span>Групп</span></a>
-          <div class="footer__meta">© 2025 Филоненко Групп · ИНН 0000000000 · ОГРН 0000000000000</div>
-        </div>
-        <nav class="footer__nav">
-          <a href="#">Политика конфиденциальности</a>
-        </nav>
+      <div class="fv2__bottom">
+        <a href="#" class="logo">Филоненко <span>Групп</span></a>
+        <div class="fv2__legal">Продолжая использовать сайт, вы соглашаетесь на использование файлов cookie. Сайт не является публичной офертой</div>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Согласие на обработку данных</a>
+        <div>© 2025 Филоненко Групп · ИНН 0000000000</div>
       </div>
     </div>
   </footer>
