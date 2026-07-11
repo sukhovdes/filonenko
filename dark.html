@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1440">
   <meta name="robots" content="noindex, nofollow">
-  <title>Филоненко Групп — вариант hero</title>
+  <title>Филоненко Групп — тёмная тема</title>
   <link rel="stylesheet" href="style.css?v=2.1">
 
   <style>
@@ -128,15 +128,6 @@
       background: rgba(255, 255, 255, 0.08);
     }
 
-    .hv2-socials {
-      display: flex;
-      gap: 8px;
-    }
-
-    .hv2-socials .hv2-icon {
-      width: 56px;
-      padding: 0;
-    }
 
     .hv2-burger-wrap {
       position: relative;
@@ -285,10 +276,345 @@
       font-size: 15px;
     }
   </style>
+  <style>
+    /* ===== ТЁМНАЯ ТЕМА: все блоки на тёмном, акцент C9B99D ===== */
+    :root {
+      --accent: #C9B99D;
+    }
+
+    body {
+      background: #141414;
+      color: #F2F1EE;
+    }
+
+    /* --- шапка --- */
+    .header {
+      background: rgba(20, 20, 20, 0.9);
+    }
+
+    .header__nav-link {
+      color: #A0A0A0;
+    }
+
+    .header__nav-link:hover {
+      color: #fff;
+    }
+
+    /* --- кнопки --- */
+    .btn--dark {
+      background: var(--accent);
+      color: #1A1A1A;
+    }
+
+    .btn--dark:hover {
+      background: #D8CBB2;
+    }
+
+    .btn--outline {
+      color: #F2F1EE;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .btn--outline:hover {
+      background: #fff;
+      color: #1A1A1A;
+      border-color: #fff;
+    }
+
+    /* --- панели и секции --- */
+    .section--dark,
+    .footer {
+      background: #191919;
+    }
+
+    .section--white {
+      background: #141414;
+    }
+
+    .hero__title-mark,
+    .hero__title-dim {
+      color: #fff;
+    }
+
+    /* --- услуги --- */
+    .svc__title {
+      color: #F2F1EE;
+    }
+
+    .services-list:hover .svc__title {
+      color: #4E4E4E;
+    }
+
+    .services-list .svc:hover .svc__title {
+      color: #fff;
+    }
+
+    .svc__desc {
+      background: var(--accent);
+      color: #1A1A1A;
+    }
+
+    .chip {
+      color: #F2F1EE;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .chip:hover {
+      border-color: #fff;
+    }
+
+    .private {
+      background: var(--accent);
+      color: #1A1A1A;
+    }
+
+    .private__text {
+      color: rgba(26, 26, 26, 0.65);
+    }
+
+    .private__text b {
+      color: #1A1A1A;
+    }
+
+    .private .btn--light {
+      background: #1A1A1A;
+      color: #fff;
+    }
+
+    .private .btn--light:hover {
+      background: #3E3E3E;
+    }
+
+    /* --- ситуации --- */
+    .situations__desc {
+      color: #9A9A9A;
+    }
+
+    .acc {
+      border-top-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .acc:last-child {
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .acc__body p {
+      color: #9A9A9A;
+    }
+
+    /* --- как мы работаем --- */
+    .tl-step__dot {
+      background: #2A2A2A;
+      color: #F2F1EE;
+    }
+
+    .tl-step__marker::after {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .tl-step__text {
+      color: #9A9A9A;
+    }
+
+    .process__note {
+      background: #1F1F1F;
+    }
+
+    .process__note-text {
+      color: #9A9A9A;
+    }
+
+    .process__note-text b {
+      color: #fff;
+    }
+
+    /* --- цитата --- */
+    .quote__role {
+      color: #9A9A9A;
+    }
+
+    /* --- кейсы --- */
+    .case-card {
+      background: #1F1F1F;
+      color: #F2F1EE;
+    }
+
+    .case-card__tag {
+      background: #2A2A2A;
+      color: #C7C7C7;
+    }
+
+    .case-card__result {
+      color: #9A9A9A;
+      border-top-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .case-card__result b {
+      color: #fff;
+    }
+
+    /* --- основатель --- */
+    .founder__role {
+      color: #9A9A9A;
+    }
+
+    .founder__bio {
+      color: #C7C7C7;
+    }
+
+    .founder__values {
+      border-top-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .founder__value-text {
+      color: #9A9A9A;
+    }
+
+    /* --- материалы --- */
+    .blog-card {
+      background: #1F1F1F;
+    }
+
+    .blog-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .blog-card__img {
+      background: #2A2A2A;
+      color: #9A9A9A;
+    }
+
+    .blog-card__more {
+      color: #9A9A9A;
+    }
+
+    /* --- контакты и форма --- */
+    .contact__desc {
+      color: #9A9A9A;
+    }
+
+    .form {
+      background: #1F1F1F;
+      color: #F2F1EE;
+    }
+
+    .form__label {
+      color: #9A9A9A;
+    }
+
+    .form__input,
+    .form__textarea {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.25);
+      color: #F2F1EE;
+    }
+
+    .form__input:focus,
+    .form__textarea:focus {
+      border-color: #fff;
+    }
+
+    .form__channel {
+      color: #F2F1EE;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .form__channel.is-active {
+      background: var(--accent);
+      color: #1A1A1A;
+      border-color: var(--accent);
+    }
+
+    .form__consent {
+      color: #9A9A9A;
+    }
+
+    .form__consent a {
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .form__consent input {
+      accent-color: var(--accent);
+    }
+
+    .form__done {
+      background: #2A2A2A;
+    }
+
+    .footer__msgrs--icons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .footer__soc {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      color: #fff;
+      transition: border-color 0.2s ease;
+    }
+
+    .footer__soc:hover {
+      border-color: #fff;
+    }
+
+    .footer__links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      max-width: 980px;
+      margin-bottom: 88px;
+    }
+
+    .footer__links-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      padding-left: 40px;
+      border-left: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer__links-title {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #7A7A7A;
+      margin-bottom: 8px;
+    }
+
+    .footer__links-col a {
+      font-size: 16px;
+      color: #A0A0A0;
+      transition: color 0.2s ease;
+    }
+
+    .footer__links-col a:hover {
+      color: #fff;
+    }
+
+    /* --- hero-v2 в тёмной теме --- */
+    .hero-v2 {
+      background: #191919;
+    }
+
+    .hero-v2__btn-main {
+      background: var(--accent);
+      color: #1A1A1A;
+    }
+
+    .hero-v2__btn-main:hover {
+      background: #D8CBB2;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ===== HERO V2: шапка поверх фона, контент к низу ===== -->
   <section class="hero-v2">
     <header class="header-v2">
       <a href="#" class="logo">Филоненко <span>Групп</span></a>
@@ -302,11 +628,6 @@
           </button>
         </nav>
         <a href="tel:+79024888220" class="hv2-phone">+7 (902) 488-82-20</a>
-        <div class="hv2-socials">
-          <a href="#" class="hv2-icon" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
-          <a href="#" class="hv2-icon" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
-          <a href="#" class="hv2-icon" aria-label="Max"><svg width="18" height="18" viewBox="0 0 720 720" fill="currentColor"><path d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/></svg></a>
-        </div>
         <button type="button" class="hv2-icon" aria-label="Поиск">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
         </button>
@@ -679,7 +1000,11 @@
           <div class="footer__label">Телефон</div>
           <a class="footer__big" href="tel:+79024888220">+7 (902) 488-82-20</a>
           <div class="footer__label">Мессенджеры</div>
-          <div class="footer__msgrs"><a href="#">Telegram</a> · <a href="#">WhatsApp</a> · <a href="#">Max</a></div>
+          <div class="footer__msgrs footer__msgrs--icons">
+            <a href="#" class="footer__soc" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+            <a href="#" class="footer__soc" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+            <a href="#" class="footer__soc" aria-label="Max"><svg width="18" height="18" viewBox="0 0 720 720" fill="currentColor"><path d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/></svg></a>
+          </div>
         </div>
         <div class="footer__col">
           <div class="footer__label">Почта</div>
@@ -689,16 +1014,32 @@
           <iframe class="footer__map" src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D1%83%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%206%D0%B0&z=16" loading="lazy" title="Карта: Владивосток, ул. Суханова, 6а"></iframe>
         </div>
       </div>
+      <div class="footer__links">
+        <div class="footer__links-col">
+          <div class="footer__links-title">Услуги</div>
+          <a href="#services">Корпоративное право и сделки</a>
+          <a href="#services">Договоры и правовая обвязка</a>
+          <a href="#services">Международные сделки и ВЭД</a>
+          <a href="#services">Налоговые риски и проверки</a>
+          <a href="#services">Уголовно-правовая защита</a>
+          <a href="#services">Суды и коммерческие споры</a>
+          <a href="#services">Абонентское сопровождение</a>
+        </div>
+        <div class="footer__links-col">
+          <div class="footer__links-title">Компания</div>
+          <a href="#founder">Об основателе</a>
+          <a href="#cases">Кейсы</a>
+          <a href="#blog">Полезные материалы</a>
+          <a href="#process">Форматы работы</a>
+          <a href="#services">Все направления</a>
+        </div>
+      </div>
       <div class="footer__bottom">
         <div>
           <a href="#" class="logo">Филоненко <span>Групп</span></a>
           <div class="footer__meta">© 2025 Филоненко Групп · ИНН 0000000000 · ОГРН 0000000000000</div>
         </div>
         <nav class="footer__nav">
-          <a href="#services">Услуги</a>
-          <a href="#cases">Кейсы</a>
-          <a href="#founder">Об основателе</a>
-          <a href="#blog">Материалы</a>
           <a href="#">Политика конфиденциальности</a>
         </nav>
       </div>
