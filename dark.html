@@ -224,11 +224,11 @@
       line-height: 1.06;
       letter-spacing: -0.01em;
       text-transform: uppercase;
-      max-width: 1080px;
+      max-width: 730px;
     }
 
     .hero-v2__bottom {
-      margin-top: 56px;
+      margin-top: 24px;
     }
 
     .hero-v2__desc {
@@ -236,7 +236,7 @@
       font-size: 17px;
       line-height: 1.5;
       color: rgba(255, 255, 255, 0.85);
-      margin-bottom: 32px;
+      margin-bottom: 64px;
     }
 
     .hero-v2__actions {
@@ -339,6 +339,8 @@
     /* --- услуги --- */
     .svc__title {
       color: #F2F1EE;
+      text-transform: none;
+      font-weight: 400;
     }
 
     .services-list:hover .svc__title {
@@ -428,11 +430,6 @@
       color: #fff;
     }
 
-    /* --- цитата --- */
-    .quote__role {
-      color: #9A9A9A;
-    }
-
     /* --- кейсы --- */
     .case-card {
       background: #1F1F1F;
@@ -453,39 +450,259 @@
       color: #fff;
     }
 
-    /* --- основатель --- */
-    .founder__role {
-      color: #9A9A9A;
+    /* ============ кейсы: стек при скролле ============ */
+    .c5 {
+      display: grid;
+      grid-template-columns: 1fr minmax(660px, 1fr);
+      gap: 56px;
+      align-items: start;
     }
 
-    .founder__bio {
+    .c5__left {
+      position: sticky;
+      top: 140px;
+    }
+
+    .c5__left-title {
+      width: min-content;
+      font-size: 80px;
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .c5__left-text {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #9A9A9A;
+      max-width: 400px;
+    }
+
+    .c5__card {
+      position: sticky;
+      display: flex;
+      flex-direction: column;
+      min-height: 460px;
+      padding: 36px 48px 48px;
+      background: #1F1F1F;
+      border: 2px solid #191919;
+      border-radius: 12px;
+    }
+
+    .c5__card + .c5__card {
+      margin-top: 24px;
+    }
+
+    .c5__card:nth-child(1) { top: 120px; background: #1F1F1F; }
+    .c5__card:nth-child(2) { top: 140px; background: #222222; }
+    .c5__card:nth-child(3) { top: 160px; background: #242424; }
+    .c5__card:nth-child(4) { top: 180px; background: #262626; }
+
+    .c5__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+
+    .c5__tag {
+      padding: 12px 14px;
+      border: 1px solid #535353;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.35;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       color: #C7C7C7;
     }
 
-    .founder__values {
-      border-top-color: rgba(255, 255, 255, 0.2);
+    .c5__num {
+      font-size: 14px;
+      color: var(--accent);
     }
 
-    .founder__value-text {
+    .c5__title {
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.2;
+      max-width: 580px;
+    }
+
+    .c5__cols {
+      margin-top: auto;
+      padding-top: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 64px;
+    }
+
+    .c5__col {
+      position: relative;
+    }
+
+    .c5__col + .c5__col::before {
+      content: "";
+      position: absolute;
+      left: -32px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .c5__col-title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .c5__col--result .c5__col-title {
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .c5__col-text {
+      font-size: 13px;
+      line-height: 1.45;
       color: #9A9A9A;
+      max-width: 250px;
+    }
+
+    /* --- цитата + основатель: акцентная панель --- */
+    .fq {
+      padding: 24px 20px;
+    }
+
+    .fq .container {
+      width: auto;
+      padding: 0;
+    }
+
+    .fq__inner {
+      background: var(--accent);
+      color: #191919;
+      border-radius: 4px;
+      padding: 40px 46px 46px;
+    }
+
+    .fq__quote-mark {
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .fq__quote {
+      margin-top: 14px;
+      font-size: 38px;
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+      max-width: 760px;
+    }
+
+    .fq__bottom {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 36px;
+      margin-top: 140px;
+    }
+
+    .fq__person {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .fq__name {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.005em;
+      text-transform: uppercase;
+    }
+
+    .fq__role {
+      margin-top: 12px;
+      font-size: 15px;
+    }
+
+    .fq__chips {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .fq__chip {
+      padding: 12px 13px;
+      border: 1px solid rgba(83, 83, 83, 0.16);
+      border-radius: 5px;
+      font-size: 13px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .fq__photo {
+      width: 128px;
+      height: 142px;
+      object-fit: cover;
+      border-radius: 4px;
     }
 
     /* --- материалы --- */
-    .blog-card {
+    .blog__grid {
+      gap: 24px;
+    }
+
+    .m-card {
+      display: flex;
+      flex-direction: column;
+      height: 348px;
+      padding: 8px;
       background: #1F1F1F;
+      border: 2px solid #191919;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: background 0.2s ease;
     }
 
-    .blog-card:hover {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    .m-card:hover {
+      background: #242424;
     }
 
-    .blog-card__img {
-      background: #2A2A2A;
-      color: #9A9A9A;
+    .m-card__img {
+      flex: 1 0 0;
+      min-height: 0;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
     }
 
-    .blog-card__more {
-      color: #9A9A9A;
+    .m-card__body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 18px;
+      /* фикс под две строки заголовка, чтобы фото у всех карточек было одной высоты */
+      flex: 0 0 108px;
+      box-sizing: border-box;
+    }
+
+    .m-card__date {
+      font-size: 12px;
+      color: #A0A0A0;
+    }
+
+    .m-card__title {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.25;
+      color: #fff;
     }
 
     /* --- контакты и форма --- */
@@ -575,8 +792,6 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 18px;
-      padding-left: 40px;
-      border-left: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .footer__links-title {
@@ -612,8 +827,8 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
-      background: var(--accent);
-      color: #1A1A1A;
+      background: #1F1F1F;
+      color: #F2F1EE;
       border-radius: 4px;
       padding: 72px 60px;
     }
@@ -631,20 +846,20 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: rgba(26, 26, 26, 0.65);
+      color: rgba(255, 255, 255, 0.55);
     }
 
     .cv2__urgent {
       margin-top: 48px;
       font-size: 15px;
       line-height: 1.55;
-      color: rgba(26, 26, 26, 0.75);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .cv2__urgent a {
       font-weight: 500;
-      color: #1A1A1A;
-      border-bottom: 1px solid rgba(26, 26, 26, 0.4);
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     .cv2__grid {
@@ -658,18 +873,18 @@
       width: 100%;
       height: 64px;
       padding: 0 20px;
-      background: rgba(26, 26, 26, 0.08);
+      background: rgba(255, 255, 255, 0.07);
       border: none;
       border-radius: 4px;
       font-family: inherit;
       font-size: 14px;
-      color: #1A1A1A;
+      color: #F2F1EE;
     }
 
     .cv2__input::placeholder {
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      color: rgba(26, 26, 26, 0.5);
+      color: rgba(255, 255, 255, 0.45);
     }
 
     .cv2__textarea {
@@ -679,26 +894,28 @@
       margin-top: 12px;
     }
 
-    .cv2__channels {
+    .cv2__radios {
       display: flex;
-      gap: 12px;
+      align-items: center;
+      gap: 28px;
+      padding: 12px 4px 0;
     }
 
-    .cv2 .form__channel {
-      flex: 1;
-      height: 64px;
-      background: rgba(26, 26, 26, 0.08);
-      border: none;
-      border-radius: 4px;
-      color: rgba(26, 26, 26, 0.65);
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+    .cv2__radio {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.85);
+      cursor: pointer;
     }
 
-    .cv2 .form__channel.is-active {
-      background: #1A1A1A;
-      color: var(--accent);
+    .cv2__radio input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      accent-color: var(--accent);
+      cursor: pointer;
     }
 
     .cv2__consent {
@@ -710,7 +927,7 @@
       text-transform: uppercase;
       letter-spacing: 0.03em;
       line-height: 1.6;
-      color: rgba(26, 26, 26, 0.75);
+      color: rgba(255, 255, 255, 0.65);
       cursor: pointer;
     }
 
@@ -718,7 +935,7 @@
       width: 22px;
       height: 22px;
       margin-top: 2px;
-      accent-color: #1A1A1A;
+      accent-color: var(--accent);
     }
 
     .cv2__consent a {
@@ -735,40 +952,48 @@
     .cv2__submit {
       height: 60px;
       padding: 0 40px;
-      background: transparent;
-      border: 1px solid #1A1A1A;
+      background: var(--accent);
+      border: none;
       border-radius: 4px;
       font-family: inherit;
       font-size: 13px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      color: #1A1A1A;
+      color: #191919;
       cursor: pointer;
       transition: all 0.2s ease;
     }
 
     .cv2__submit:hover {
-      background: #1A1A1A;
-      color: var(--accent);
+      background: #D8CAB0;
     }
 
     .cv2__note {
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      color: rgba(26, 26, 26, 0.65);
+      color: rgba(255, 255, 255, 0.5);
     }
 
     .cv2 .form__done {
-      background: rgba(26, 26, 26, 0.1);
-      color: #1A1A1A;
+      background: rgba(255, 255, 255, 0.08);
+      color: #F2F1EE;
+    }
+
+    .footer__links--in-col {
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      max-width: none;
+      margin: 72px 0 0;
     }
 
     /* --- футер v2 --- */
     .footer__map {
       width: 100%;
-      height: 280px;
+      height: auto;
+      flex: 1 1 auto;
+      min-height: 480px;
     }
 
     .fv2 {
@@ -783,18 +1008,18 @@
 
     .fv2__right {
       position: relative;
+      display: flex;
+      flex-direction: column;
       padding-left: 64px;
       border-left: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .fv2__eyebrow {
-      display: flex;
-      align-items: center;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #fff;
+      color: var(--accent);
       margin-bottom: 28px;
     }
 
@@ -898,6 +1123,21 @@
     /* --- hero-v2 в тёмной теме --- */
     .hero-v2 {
       background: #191919;
+      overflow: hidden;
+    }
+
+    .hero-v2__video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-v2__content {
+      position: relative;
+      z-index: 2;
     }
 
     .hero-v2__btn-main {
@@ -913,6 +1153,7 @@
 <body>
 
   <section class="hero-v2">
+    <video class="hero-v2__video" autoplay muted loop playsinline src="video/hero-boomerang-eased.mp4"></video>
     <header class="header-v2">
       <a href="#" class="logo">Филоненко <span>Групп</span></a>
       <div class="hv2-right">
@@ -978,7 +1219,7 @@
   <section class="section" id="services">
     <div class="container">
       <div class="services-list">
-        <div class="eyebrow services-list__eyebrow">( Услуги )</div>
+        <div class="eyebrow services-list__eyebrow">Услуги</div>
         <div class="svc">
           <h3 class="svc__title">Корпоративное право и&nbsp;сделки<sup>( 01 )</sup></h3>
           <p class="svc__desc">Структурирование бизнеса, корпоративные договоры, сделки с долями и акциями, выход из бизнеса, совместные проекты, M&A и юридическая проверка компаний перед покупкой.</p>
@@ -1127,116 +1368,140 @@
     </div>
   </section>
 
-  <!-- ===== QUOTE ===== -->
-  <section class="section section--white">
-    <div class="container">
-      <div class="quote__mark">«</div>
-      <blockquote class="quote">Помогаем бизнесу принимать точные юридические решения — от&nbsp;договоров и&nbsp;проверок до&nbsp;уголовно-правовых рисков и&nbsp;международных проектов</blockquote>
-      <div class="quote__author">
-        <img class="quote__avatar" src="img/imgi_50_Frame_6q3.jpg" alt="Татьяна Филоненко">
-        <div>
-          <div class="quote__name">Татьяна Филоненко</div>
-          <div class="quote__role">Основатель, кандидат юридических наук</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CASES ===== -->
+  <!-- ===== CASES (стек при скролле) ===== -->
   <section class="section section--dark" id="cases">
     <div class="container">
-      <div class="section-head">
-        <h2 class="display">Кейсы</h2>
-      </div>
-      <div class="cases__grid">
-        <div class="case-card">
-          <span class="case-card__tag">Международные споры</span>
-          <h3 class="case-card__title"><span>Защита иностранной компании</span> в российском арбитраже</h3>
-          <p class="case-card__result"><b>Результат:</b> интересы защищены в нескольких судебных инстанциях.</p>
+      <div class="c5">
+        <div class="c5__left">
+          <h3 class="c5__left-title">Успешные кейсы</h3>
+          <p class="c5__left-text">Обезличенные примеры задач, в которых важны точность, конфиденциальность и опыт</p>
         </div>
-        <div class="case-card">
-          <span class="case-card__tag">Санкционное регулирование</span>
-          <h3 class="case-card__title">Выход иностранного инвестора под <span>контрсанкционными ограничениями</span></h3>
-          <p class="case-card__result"><b>Результат:</b> заключение по допустимым и рискованным вариантам расчётов.</p>
-        </div>
-        <div class="case-card">
-          <span class="case-card__tag">Товарные знаки и ТРОИС</span>
-          <h3 class="case-card__title">Защита бренда иностранного производителя от <span>серого импорта</span></h3>
-          <p class="case-card__result"><b>Результат:</b> знак включён в Таможенный реестр, контроль за ввозом усилен.</p>
-        </div>
-        <div class="case-card">
-          <span class="case-card__tag">Корпоративное право</span>
-          <h3 class="case-card__title">Предотвращение <span>корпоративного конфликта</span> между партнёрами</h3>
-          <p class="case-card__result"><b>Результат:</b> конфликтные сценарии описаны заранее, риск блокировки снижен.</p>
+        <div class="c5__cards">
+          <div class="c5__card">
+            <div class="c5__top">
+              <div class="c5__tag">Международные споры</div>
+              <div class="c5__num">01 )</div>
+            </div>
+            <h3 class="c5__title">Защита иностранной компании в российском арбитраже</h3>
+            <div class="c5__cols">
+              <div class="c5__col">
+                <div class="c5__col-title">Ситуация</div>
+                <p class="c5__col-text">Контрагент требовал взыскать неустойку и убытки по договору ремонта.</p>
+              </div>
+              <div class="c5__col c5__col--result">
+                <div class="c5__col-title">Результат</div>
+                <p class="c5__col-text">Доказали, что нарушение сроков связано с объективными обстоятельствами, — интересы защищены в нескольких судебных инстанциях.</p>
+              </div>
+            </div>
+          </div>
+          <div class="c5__card">
+            <div class="c5__top">
+              <div class="c5__tag">Санкционное регулирование</div>
+              <div class="c5__num">02 )</div>
+            </div>
+            <h3 class="c5__title">Выход иностранного инвестора под контрсанкционными ограничениями</h3>
+            <div class="c5__cols">
+              <div class="c5__col">
+                <div class="c5__col-title">Ситуация</div>
+                <p class="c5__col-text">Сделка оформлена, но расчёты осложнились новыми требованиями, включая разрешение Правительственной комиссии.</p>
+              </div>
+              <div class="c5__col c5__col--result">
+                <div class="c5__col-title">Результат</div>
+                <p class="c5__col-text">Подготовлено заключение по допустимым и рискованным вариантам расчётов.</p>
+              </div>
+            </div>
+          </div>
+          <div class="c5__card">
+            <div class="c5__top">
+              <div class="c5__tag">Товарные знаки и ТРОИС</div>
+              <div class="c5__num">03 )</div>
+            </div>
+            <h3 class="c5__title">Защита бренда иностранного производителя от серого импорта</h3>
+            <div class="c5__cols">
+              <div class="c5__col">
+                <div class="c5__col-title">Ситуация</div>
+                <p class="c5__col-text">Товары начали продавать неуполномоченные импортёры — угроза репутации и ценовой политике бренда.</p>
+              </div>
+              <div class="c5__col c5__col--result">
+                <div class="c5__col-title">Результат</div>
+                <p class="c5__col-text">Знак включён в Таможенный реестр, контроль за ввозом усилен.</p>
+              </div>
+            </div>
+          </div>
+          <div class="c5__card">
+            <div class="c5__top">
+              <div class="c5__tag">Корпоративное право</div>
+              <div class="c5__num">04 )</div>
+            </div>
+            <h3 class="c5__title">Предотвращение корпоративного конфликта между партнёрами</h3>
+            <div class="c5__cols">
+              <div class="c5__col">
+                <div class="c5__col-title">Ситуация</div>
+                <p class="c5__col-text">Партнёры запускали совместный бизнес. Нужен был корпоративный договор: порядок решений, выход, опционы, deadlock-механизмы.</p>
+              </div>
+              <div class="c5__col c5__col--result">
+                <div class="c5__col-title">Результат</div>
+                <p class="c5__col-text">Конфликтные сценарии описаны заранее, риск блокировки снижен.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <a href="#" class="btn btn--ghost cases__more">Все кейсы</a>
     </div>
   </section>
 
-  <!-- ===== FOUNDER ===== -->
-  <section class="section" id="founder">
+  <!-- ===== QUOTE + FOUNDER (акцентная панель) ===== -->
+  <section class="fq" id="founder">
     <div class="container">
-      <div class="founder">
-        <img class="founder__photo" src="img/imgi_50_Frame_6q3.jpg" alt="Татьяна Филоненко">
-        <div>
-          <h2 class="founder__name">Татьяна Филоненко</h2>
-          <p class="founder__role">Основатель проекта, кандидат юридических наук</p>
-          <p class="founder__bio">Собирает юридическую команду под сложные правовые ситуации бизнеса. Сложное объясняет простым языком.</p>
-          <div class="founder__creds">
-            <span class="chip">Кандидат юридических наук</span>
-            <span class="chip">Опыт работы в органах прокуратуры</span>
-            <span class="chip">Научная деятельность</span>
-            <span class="chip">Уголовно-правовая практика</span>
-          </div>
-          <div class="founder__values">
-            <div>
-              <div class="founder__value-title">Профильный эксперт под задачу</div>
-              <div class="founder__value-text">Специалист с релевантной практикой, а не универсальная консультация.</div>
-            </div>
-            <div>
-              <div class="founder__value-title">Бизнес-последствия, а не формальности</div>
-              <div class="founder__value-text">Что решение значит для компании и руководителя.</div>
-            </div>
-            <div>
-              <div class="founder__value-title">Поэтапная работа без сюрпризов</div>
-              <div class="founder__value-text">Объём и формат согласуются до начала работы.</div>
-            </div>
-            <div>
-              <div class="founder__value-title">Конфиденциальность по умолчанию</div>
-              <div class="founder__value-text">Споры, проверки, сделки — только между нами.</div>
+      <div class="fq__inner">
+        <div class="fq__quote-mark">«</div>
+        <blockquote class="fq__quote">Помогаем бизнесу принимать точные юридические решения — от&nbsp;договоров и&nbsp;проверок до&nbsp;уголовно-правовых рисков и&nbsp;международных проектов</blockquote>
+        <div class="fq__bottom">
+          <div class="fq__person">
+            <div class="fq__name">Татьяна Филоненко</div>
+            <div class="fq__role">основатель проекта</div>
+            <div class="fq__chips">
+              <span class="fq__chip">Кандидат юридических наук</span>
+              <span class="fq__chip">Опыт работы в органах прокуратуры</span>
+              <span class="fq__chip">Научная деятельность</span>
+              <span class="fq__chip">Уголовно-правовая практика</span>
             </div>
           </div>
+          <img class="fq__photo" src="img/imgi_50_Frame_6q3.jpg" alt="Татьяна Филоненко">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== BLOG ===== -->
-  <section class="section" style="padding-top: 0;" id="blog">
+  <section class="section section--dark" id="blog">
     <div class="container">
       <div class="section-head">
         <h2 class="display display--md">Материалы</h2>
         <a href="#" class="btn btn--outline">Все материалы</a>
       </div>
       <div class="blog__grid">
-        <a href="#" class="blog-card">
-          <div class="blog-card__img">Фото</div>
-          <div class="blog-card__date">12 июня 2025</div>
-          <h3 class="blog-card__title">Требование налоговой: что делать в первые 24 часа</h3>
-          <div class="blog-card__more">Читать →</div>
+        <a href="#" class="m-card">
+          <img class="m-card__img" src="img/blog-1.jpg" alt="">
+          <div class="m-card__body">
+            <div class="m-card__date">12 июня 2025</div>
+            <h3 class="m-card__title">Требование налоговой: что делать в первые 24 часа</h3>
+          </div>
         </a>
-        <a href="#" class="blog-card">
-          <div class="blog-card__img">Фото</div>
-          <div class="blog-card__date">3 июня 2025</div>
-          <h3 class="blog-card__title">Корпоративный договор: как избежать конфликта партнёров</h3>
-          <div class="blog-card__more">Читать →</div>
+        <a href="#" class="m-card">
+          <img class="m-card__img" src="img/blog-2.jpg" alt="">
+          <div class="m-card__body">
+            <div class="m-card__date">3 июня 2025</div>
+            <h3 class="m-card__title">Корпоративный договор: как избежать конфликта партнёров</h3>
+          </div>
         </a>
-        <a href="#" class="blog-card">
-          <div class="blog-card__img">Фото</div>
-          <div class="blog-card__date">27 мая 2025</div>
-          <h3 class="blog-card__title">Вызов на допрос: главные ошибки бизнеса</h3>
-          <div class="blog-card__more">Читать →</div>
+        <a href="#" class="m-card">
+          <img class="m-card__img" src="img/blog-3.jpg" alt="">
+          <div class="m-card__body">
+            <div class="m-card__date">27 мая 2025</div>
+            <h3 class="m-card__title">Вызов на допрос: главные ошибки бизнеса</h3>
+          </div>
         </a>
       </div>
     </div>
@@ -1256,10 +1521,10 @@
             <input class="cv2__input" id="fName" type="text" placeholder="Ваше имя*">
             <input class="cv2__input" id="fPhone" type="tel" placeholder="+7 (000) 000-00-00">
           </div>
-          <div class="form__channels cv2__channels">
-            <button type="button" class="form__channel is-active">Звонок</button>
-            <button type="button" class="form__channel">Telegram</button>
-            <button type="button" class="form__channel">WhatsApp</button>
+          <div class="cv2__radios">
+            <label class="cv2__radio"><input type="radio" name="channel" value="Звонок" checked><span>Звонок</span></label>
+            <label class="cv2__radio"><input type="radio" name="channel" value="Telegram"><span>Telegram</span></label>
+            <label class="cv2__radio"><input type="radio" name="channel" value="WhatsApp"><span>WhatsApp</span></label>
           </div>
           <textarea class="cv2__input cv2__textarea" id="fText" placeholder="Коротко о ситуации"></textarea>
           <label class="cv2__consent">
@@ -1281,26 +1546,13 @@
     <div class="container">
       <div class="fv2">
         <div class="fv2__left">
-          <div class="fv2__eyebrow"><span class="fv2__dot"></span>Контакты</div>
+          <div class="fv2__eyebrow">Контакты</div>
           <h2 class="fv2__title">Начните работу с нами</h2>
           <div class="fv2__tiles">
             <a href="#contact" class="fv2__tile">Связаться <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><line x1="2" y1="9.58579" x2="8.58579" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3.53845 2H9.53845V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <a href="#" class="fv2__tile">Карточка организации <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><line x1="2" y1="9.58579" x2="8.58579" y2="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3.53845 2H9.53845V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
-        </div>
-        <div class="fv2__right">
-          <div class="fv2__socials">
-            <a href="#" class="footer__soc" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
-            <a href="#" class="footer__soc" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
-            <a href="#" class="footer__soc" aria-label="Max"><svg width="18" height="18" viewBox="0 0 720 720" fill="currentColor"><path d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/></svg></a>
-          </div>
-          <a class="fv2__big" href="tel:+79024888220">+7 (902) 488-82-20</a>
-          <a class="fv2__big" href="mailto:info@f-plus.ru">info@f-plus.ru</a>
-          <div class="fv2__address">Владивосток, ул. Суханова, 6а</div>
-          <iframe class="footer__map" src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D1%83%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%206%D0%B0&z=16" loading="lazy" title="Карта: Владивосток, ул. Суханова, 6а"></iframe>
-        </div>
-      </div>
-      <div class="footer__links">
+      <div class="footer__links footer__links--in-col">
         <div class="footer__links-col">
           <div class="footer__links-title">Услуги</div>
           <a href="#services">Корпоративное право и сделки</a>
@@ -1318,6 +1570,19 @@
           <a href="#blog">Полезные материалы</a>
           <a href="#process">Форматы работы</a>
           <a href="#services">Все направления</a>
+        </div>
+      </div>
+        </div>
+        <div class="fv2__right">
+          <div class="fv2__socials">
+            <a href="#" class="footer__soc" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+            <a href="#" class="footer__soc" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+            <a href="#" class="footer__soc" aria-label="Max"><svg width="18" height="18" viewBox="0 0 720 720" fill="currentColor"><path d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/></svg></a>
+          </div>
+          <a class="fv2__big" href="tel:+79024888220">+7 (902) 488-82-20</a>
+          <a class="fv2__big" href="mailto:info@f-plus.ru">info@f-plus.ru</a>
+          <div class="fv2__address">Владивосток, ул. Суханова, 6а</div>
+          <iframe class="footer__map" src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D1%83%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%206%D0%B0&z=16" loading="lazy" title="Карта: Владивосток, ул. Суханова, 6а"></iframe>
         </div>
       </div>
       <div class="fv2__bottom">
@@ -1346,15 +1611,6 @@
         a.addEventListener('click', function () { menu.classList.remove('is-open'); });
       });
     })();
-
-    document.querySelectorAll('.form__channels').forEach(function (group) {
-      group.addEventListener('click', function (e) {
-        var btn = e.target.closest('.form__channel');
-        if (!btn) return;
-        group.querySelectorAll('.form__channel').forEach(function (b) { b.classList.remove('is-active'); });
-        btn.classList.add('is-active');
-      });
-    });
 
     document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
