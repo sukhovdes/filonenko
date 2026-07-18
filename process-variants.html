@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Как мы работаем — варианты вёрстки</title>
+  <link rel="stylesheet" href="style.css?v=2.1">
+  <style>
+    :root {
+      --accent: #C9B99D;
+    }
+
+    body {
+      background: #141414;
+      color: #F2F1EE;
+    }
+
+    .v-label {
+      display: inline-flex;
+      align-items: center;
+      height: 34px;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 40px;
+    }
+
+    .v-section {
+      padding: 96px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .v-head {
+      font-size: 44px;
+      font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .v-note {
+      font-size: 15px;
+      color: #9A9A9A;
+      max-width: 640px;
+      margin-bottom: 56px;
+    }
+
+    .v-display {
+      font-size: 52px;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.005em;
+      text-transform: uppercase;
+      margin-bottom: 56px;
+    }
+
+    /* ============ ВАРИАНТ 1: текущий — карточки с иконками ============ */
+    .proc {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .proc-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 380px;
+      padding: 40px 44px 44px;
+      background: #191919;
+      border-radius: 16px;
+      transition: background 0.25s ease;
+    }
+
+    .proc-card:hover {
+      background: #1F1F1F;
+    }
+
+    .proc-card__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: auto;
+    }
+
+    .proc-card__icon {
+      color: var(--accent);
+      transition: transform 0.25s ease;
+    }
+
+    .proc-card:hover .proc-card__icon {
+      transform: translateY(-4px);
+    }
+
+    .proc-card__num {
+      font-size: 14px;
+      color: var(--accent);
+    }
+
+    .proc-card__title {
+      margin-top: 48px;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .proc-card__text {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #9A9A9A;
+    }
+
+    /* ============ ВАРИАНТ 2: карточки + линия шагов ============ */
+    .p2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .p2__head {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .p2__dot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      background: #141414;
+      position: relative;
+      z-index: 1;
+    }
+
+    .p2__head::after {
+      content: "";
+      position: absolute;
+      left: 60px;
+      right: -36px;
+      top: 50%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .p2__col:last-child .p2__head::after {
+      display: none;
+    }
+
+    .p2__card {
+      display: flex;
+      flex-direction: column;
+      min-height: 280px;
+      padding: 36px 40px 40px;
+      background: #191919;
+      border-radius: 16px;
+      transition: background 0.25s ease;
+    }
+
+    .p2__card:hover {
+      background: #1F1F1F;
+    }
+
+    .p2__title {
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .p2__text {
+      margin-top: auto;
+      padding-top: 24px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #9A9A9A;
+    }
+
+    /* ============ ВАРИАНТ 3: вертикальный таймлайн ============ */
+    .p3 {
+      position: relative;
+      padding-left: 96px;
+    }
+
+    .p3::before {
+      content: "";
+      position: absolute;
+      left: 23px;
+      top: 24px;
+      bottom: 56px;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .p3__row {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 64px;
+      align-items: start;
+      padding: 40px 0 56px;
+    }
+
+    .p3__dot {
+      position: absolute;
+      left: -96px;
+      top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      background: #141414;
+    }
+
+    .p3__title {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 1.1;
+      max-width: 560px;
+    }
+
+    .p3__text {
+      font-size: 16px;
+      line-height: 1.55;
+      color: #9A9A9A;
+      padding-top: 10px;
+    }
+
+    /* ============ ВАРИАНТ 4: гигантские контурные номера ============ */
+    .p4 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .p4__col {
+      position: relative;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .p4__col::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 56px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .p4__num {
+      font-size: 128px;
+      font-weight: 500;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(201, 185, 157, 0.55);
+    }
+
+    .p4__arrow {
+      position: absolute;
+      top: 80px;
+      right: 0;
+      color: var(--accent);
+      opacity: 0.6;
+    }
+
+    .p4__title {
+      margin-top: 32px;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .p4__text {
+      margin-top: 14px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #9A9A9A;
+      max-width: 360px;
+    }
+
+    /* ============ ВАРИАНТ 5: редакционные строки-этапы ============ */
+    .p5 {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .p5__row {
+      display: grid;
+      grid-template-columns: 140px 1fr 480px 44px;
+      gap: 48px;
+      align-items: start;
+      padding: 48px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      transition: background 0.2s ease;
+    }
+
+    .p5__row:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .p5__num {
+      font-size: 44px;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--accent);
+    }
+
+    .p5__title {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.15;
+      max-width: 480px;
+    }
+
+    .p5__text {
+      font-size: 15px;
+      line-height: 1.55;
+      color: #9A9A9A;
+      padding-top: 6px;
+    }
+
+    .p5__arrow {
+      color: var(--accent);
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      padding-top: 10px;
+    }
+
+    .p5__row:hover .p5__arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ВАРИАНТ 1 ===== -->
+  <section class="v-section">
+    <div class="container">
+      <div class="v-label">Вариант 1 — текущий</div>
+      <h2 class="v-head">Карточки с иконками</h2>
+      <p class="v-note">То, что сейчас в dark: три карточки, иконка + номер сверху, текст внизу. Пошаговость читается только номерами.</p>
+      <h2 class="v-display">Как мы работаем</h2>
+      <div class="proc">
+        <div class="proc-card">
+          <div class="proc-card__top">
+            <svg class="proc-card__icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+            <span class="proc-card__num">01 )</span>
+          </div>
+          <h3 class="proc-card__title">Встреча и разбор ситуации</h3>
+          <p class="proc-card__text">Начнём с того, что есть: договор, требование, переписка. После встречи ясно, насколько всё серьёзно и какой шаг следующий.</p>
+        </div>
+        <div class="proc-card">
+          <div class="proc-card__top">
+            <svg class="proc-card__icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="5" r="2.5"/><path d="M7.5 19H14a3.5 3.5 0 0 0 0-7h-4a3.5 3.5 0 0 1 0-7h6.5"/></svg>
+            <span class="proc-card__num">02 )</span>
+          </div>
+          <h3 class="proc-card__title">Дорожная карта</h3>
+          <p class="proc-card__text">Для сложных ситуаций — письменный план под задачу: риски, сценарии, документы, формат работы и ориентир по стоимости.</p>
+        </div>
+        <div class="proc-card">
+          <div class="proc-card__top">
+            <svg class="proc-card__icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 8 12 13 3 8Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/></svg>
+            <span class="proc-card__num">03 )</span>
+          </div>
+          <h3 class="proc-card__title">Работа в нужном формате</h3>
+          <p class="proc-card__text">Консультация, сопровождение сделки, спора или проверки, абонентская поддержка. Объём и этапы согласуем до начала.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ВАРИАНТ 2 ===== -->
+  <section class="v-section">
+    <div class="container">
+      <div class="v-label">Вариант 2</div>
+      <h2 class="v-head">Карточки + линия шагов</h2>
+      <p class="v-note">Номера в кружках соединены линией — классический степпер поверх карточной сетки. Пошаговость видна сразу.</p>
+      <h2 class="v-display">Как мы работаем</h2>
+      <div class="p2">
+        <div class="p2__col">
+          <div class="p2__head"><div class="p2__dot">01</div></div>
+          <div class="p2__card">
+            <h3 class="p2__title">Встреча и разбор ситуации</h3>
+            <p class="p2__text">Начнём с того, что есть: договор, требование, переписка. После встречи ясно, насколько всё серьёзно и какой шаг следующий.</p>
+          </div>
+        </div>
+        <div class="p2__col">
+          <div class="p2__head"><div class="p2__dot">02</div></div>
+          <div class="p2__card">
+            <h3 class="p2__title">Дорожная карта</h3>
+            <p class="p2__text">Для сложных ситуаций — письменный план под задачу: риски, сценарии, документы, формат работы и ориентир по стоимости.</p>
+          </div>
+        </div>
+        <div class="p2__col">
+          <div class="p2__head"><div class="p2__dot">03</div></div>
+          <div class="p2__card">
+            <h3 class="p2__title">Работа в нужном формате</h3>
+            <p class="p2__text">Консультация, сопровождение сделки, спора или проверки, абонентская поддержка. Объём и этапы согласуем до начала.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ВАРИАНТ 3 ===== -->
+  <section class="v-section">
+    <div class="container">
+      <div class="v-label">Вариант 3</div>
+      <h2 class="v-head">Вертикальный таймлайн</h2>
+      <p class="v-note">Редакционная подача: рельса с номерами слева, крупные заголовки, текст правой колонкой. Максимум пошаговости.</p>
+      <h2 class="v-display">Как мы работаем</h2>
+      <div class="p3">
+        <div class="p3__row">
+          <div class="p3__dot">01</div>
+          <h3 class="p3__title">Встреча и разбор ситуации</h3>
+          <p class="p3__text">Начнём с того, что есть: договор, требование, переписка. После встречи ясно, насколько всё серьёзно и какой шаг следующий.</p>
+        </div>
+        <div class="p3__row">
+          <div class="p3__dot">02</div>
+          <h3 class="p3__title">Дорожная карта</h3>
+          <p class="p3__text">Для сложных ситуаций — письменный план под задачу: риски, сценарии, документы, формат работы и ориентир по стоимости.</p>
+        </div>
+        <div class="p3__row">
+          <div class="p3__dot">03</div>
+          <h3 class="p3__title">Работа в нужном формате</h3>
+          <p class="p3__text">Консультация, сопровождение сделки, спора или проверки, абонентская поддержка. Объём и этапы согласуем до начала.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ВАРИАНТ 4 ===== -->
+  <section class="v-section">
+    <div class="container">
+      <div class="v-label">Вариант 4</div>
+      <h2 class="v-head">Гигантские контурные номера</h2>
+      <p class="v-note">Аwwwards-приём: огромные цифры контуром, акцентный отрезок на линии сверху, стрелки между шагами.</p>
+      <h2 class="v-display">Как мы работаем</h2>
+      <div class="p4">
+        <div class="p4__col">
+          <div class="p4__num">01</div>
+          <svg class="p4__arrow" width="28" height="28" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="currentColor" stroke-width="1.2"/><polyline points="6.5 2.5 10 6 6.5 9.5" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 class="p4__title">Встреча и разбор ситуации</h3>
+          <p class="p4__text">Начнём с того, что есть: договор, требование, переписка. После встречи ясно, насколько всё серьёзно и какой шаг следующий.</p>
+        </div>
+        <div class="p4__col">
+          <div class="p4__num">02</div>
+          <svg class="p4__arrow" width="28" height="28" viewBox="0 0 12 12" fill="none"><line x1="1" y1="6" x2="10" y2="6" stroke="currentColor" stroke-width="1.2"/><polyline points="6.5 2.5 10 6 6.5 9.5" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 class="p4__title">Дорожная карта</h3>
+          <p class="p4__text">Для сложных ситуаций — письменный план под задачу: риски, сценарии, документы, формат работы и ориентир по стоимости.</p>
+        </div>
+        <div class="p4__col">
+          <div class="p4__num">03</div>
+          <h3 class="p4__title">Работа в нужном формате</h3>
+          <p class="p4__text">Консультация, сопровождение сделки, спора или проверки, абонентская поддержка. Объём и этапы согласуем до начала.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ВАРИАНТ 5 ===== -->
+  <section class="v-section">
+    <div class="container">
+      <div class="v-label">Вариант 5</div>
+      <h2 class="v-head">Редакционные строки-этапы</h2>
+      <p class="v-note">Полноширинные строки с крупным акцентным номером — в рифму со списком услуг. На ховере строка подсвечивается и выезжает стрелка.</p>
+      <h2 class="v-display">Как мы работаем</h2>
+      <div class="p5">
+        <div class="p5__row">
+          <div class="p5__num">01</div>
+          <h3 class="p5__title">Встреча и разбор ситуации</h3>
+          <p class="p5__text">Начнём с того, что есть: договор, требование, переписка. После встречи ясно, насколько всё серьёзно и какой шаг следующий.</p>
+          <svg class="p5__arrow" width="28" height="28" viewBox="0 0 12 12" fill="none"><line x1="2" y1="9.58579" x2="8.58579" y2="3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M3.53845 2H9.53845V8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="p5__row">
+          <div class="p5__num">02</div>
+          <h3 class="p5__title">Дорожная карта</h3>
+          <p class="p5__text">Для сложных ситуаций — письменный план под задачу: риски, сценарии, документы, формат работы и ориентир по стоимости.</p>
+          <svg class="p5__arrow" width="28" height="28" viewBox="0 0 12 12" fill="none"><line x1="2" y1="9.58579" x2="8.58579" y2="3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M3.53845 2H9.53845V8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="p5__row">
+          <div class="p5__num">03</div>
+          <h3 class="p5__title">Работа в нужном формате</h3>
+          <p class="p5__text">Консультация, сопровождение сделки, спора или проверки, абонентская поддержка. Объём и этапы согласуем до начала.</p>
+          <svg class="p5__arrow" width="28" height="28" viewBox="0 0 12 12" fill="none"><line x1="2" y1="9.58579" x2="8.58579" y2="3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M3.53845 2H9.53845V8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
